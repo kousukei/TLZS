@@ -1,0 +1,118 @@
+用語
+テンプレート＝模板
+レイアウト＝佈局
+
+
+!=　OK
+=!　bug
+
+
+zipエラーならばphpファイルでphp.iniを検索してVSCで開いて中にextension=php_zip.dll
+このコートを探してなかったらこのまま追加すればいいです
+あれば前の；を削除して保存すれば大丈夫です。
+
+サーバー起動出来ない場合はもう一度composer installをすればできるかもしれません
+
+php ratisan serve
+
+
+#Alias / "C:/xampp/htdocs/sample-project/public/"
+#<Directory "C:/xampp/htdocs/sample-project/public/">
+#Options Indexes FollowSymLinks
+#MultiViews AllowOverride
+#All Require all granted
+#</Directory>
+
+
+Alias / "C:/xampp/htdocs/sample-project/public/"
+
+<Directory "C:/xampp/htdocs/sample-project/public/">
+    #Options Indexs FollowSymLinks MultiViews
+    #AllowOverride all
+        #Order allow,deny
+    #Allow from all
+</Directory>
+
+
+
+
+php artisan key:generate：キーの設定
+php artisan key:generate --show：設定したキーを確認する
+
+
+C:\xampp\htdocs\sample-project　ファイルの場所
+
+php artisan serve：サーバーを起動します。
+
+
+
+Laravel 8で「ターゲットクラスが存在しません」を修正する方法
+https://qiita.com/tamakiiii/items/e71040173fa0a1fcad83
+RouteServiceProvider.phpで名前空間を手動で追加する
+web.phpで完全な名前空間を使用する
+web.phpでアクション構文を使用する
+
+
+特殊ディレクティブ
+@unless(条件)
+…表示内容…
+@endunless
+条件がfalseの時表示します。tureの時表示しない。
+
+@empty(変数)
+…表示内容…
+@else
+…表示内容…
+@endempty
+変数が空の場合、表示します。
+
+@isset(変数)
+…表示内容…
+@else
+…表示内容…
+@endisset
+変数が定義済みの場合に表示(定義されているかどうかを確認するものです)
+
+@ifディレクティブ
+@if(条件)
+…表示内容…
+@elseif(条件)
+…表示内容…
+@else
+…表示内容…
+@endif
+
+繰り返しのディレクティブ
+@for(初期化；条件；後処理；)
+…繰り返す…
+@endfor
+
+@foreach($配列as $変数)
+…繰り返す…
+@endforeach
+
+@forelse($配列as $変数)
+…繰り返す…
+@empty
+…$変数が空の時の処理
+@endforelse
+値をすべで取り出し終えて取り出せなくなった時@emptyにある処理を実行して繰り返しを終えます
+
+@while(条件)
+…繰り返す…
+endwhile
+
+$loop  ループ変数
+繰り返しに関する情報などを得ることができます。
+
+@slot(名前)
+…設定する内容…
+@endslot
+スロットは{{}}で指定された変数にあ値を設定するためのものです
+
+empty():$空チェックしたい変数(必須):チェックしたい変数を指定します
+
+次の値は空と判断されます。⚫︎ “0” (文字列として0)⚫︎ 0（0は整数）⚫︎ “” (空の文字列)
+
+⚫︎ null⚫︎ 偽⚫︎ array() (空の配列)⚫︎ $var1 (宣言されているが値がない変数)
+
